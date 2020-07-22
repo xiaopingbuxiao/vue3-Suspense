@@ -232,8 +232,8 @@ export default {
 
 
 
-**代码**
-
+## 实例代码
+上面演示的所有代码 [vue3-Suspense](https://github.com/xiaopingbuxiao/vue3-Suspense)
 
 
 
