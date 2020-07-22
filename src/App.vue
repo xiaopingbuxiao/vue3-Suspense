@@ -2,34 +2,48 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3.0 + Vite" />-->
-  <router-link to="/home">Home</router-link>|
-  <router-link to="/about">About</router-link>
-  <Suspense>
-    <template #default>
-      <router-view />
-    </template>
-    <template #fallback>
-      <div class="loading"></div>
-    </template>
-  </Suspense>
+  <!-- <button @click="loadAsyncComponent">点击加载异步组件</button>
+  <div class="box">
+    <h1 v-if="error">load async component error</h1>
+    <Suspense v-else-if="loadAsync">
+      <template #default>
+        <AsyncComponent></AsyncComponent>
+      </template>
+      <template #fallback>
+        <div class="loading"></div>
+      </template>
+    </Suspense>
+  </div> -->
 
-  <!-- <button @click="loadAsyncComponent">点击加载异步组件</button> -->
-  <!-- <button @click="reload">刷新</button>
+  <div class="box">
+    <button @click="reload">刷新</button>
+    <h1 v-if="error">load async component error</h1>
+    <Suspense v-else>
+      <template #default>
+        <AsyncComponent></AsyncComponent>
+      </template>
+      <template #fallback>
+        <div class="loading"></div>
+      </template>
+    </Suspense>
+  </div>
 
-  <h1 v-if="error">load async component error</h1>
-  <Suspense v-else>
-    <template #default>
-      <AsyncComponent></AsyncComponent>
-    </template>
-    <template #fallback>
-      <div class="loading"></div>
-    </template>
-  </Suspense>-->
+  <hr />
+  <div class="box">
+    <router-link to="/home">Home</router-link>|
+    <router-link to="/about">About</router-link>
+    <Suspense>
+      <template #default>
+        <router-view />
+      </template>
+      <template #fallback>
+        <div class="loading"></div>
+      </template>
+    </Suspense>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-// import AsyncComponent from './components/async-component'
 import { ref, defineAsyncComponent, onErrorCaptured } from "vue";
 
 export default {
@@ -49,7 +63,6 @@ export default {
     };
   },
   components: {
-    HelloWorld,
     AsyncComponent: defineAsyncComponent(() => {
       return import("./components/async-component.vue");
     })
@@ -108,8 +121,11 @@ button {
     transform: rotate(360deg);
   }
 }
-.router-link-active{
+.router-link-active {
   color: #1890ff;
 }
-
+.box {
+  height: 200px;
+  position: relative;
+}
 </style>

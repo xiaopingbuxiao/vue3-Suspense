@@ -4,17 +4,8 @@
 </template>
 
 <script>
-// import { sleep } from "../util/index";
+import { sleep } from "../util/index";
 import { ref, onErrorCaptured } from "vue";
-
-const sleep = time => {
-  return new Promise((reslove, reject) => {
-    setTimeout(() => {
-      reslove();
-    }, time);
-  });
-};
-
 export default {
   name: "AsyncComponent",
   async setup() {

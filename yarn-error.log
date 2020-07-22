@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\pingjh\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add sass -D
+  C:\Program Files\nodejs\node.exe C:\Users\pingjh\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
 
 PATH: 
-  C:\cmder\bin;C:\cmder\vendor\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;%NVM_HOME%;%NVM_SYMLINK%;C:\Ruby26\bin;C:\Users\pingjh\AppData\Local\Microsoft\WindowsApps;C:\cmder;C:\Program Files\nvm;C:\Users\pingjh\AppData\Roaming\npm;E:\nvm-noinstall;C:\Users\pingjh\AppData\Local\BypassRuntm;C:\Users\pingjh\AppData\Local\Programs\Fiddler;C:\Users\pingjh\AppData\Local\Programs\Microsoft VS Code\bin;C:\nvm;C:\Program Files\nodejs;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\cmder\vendor\git-for-windows\cmd;C:\cmder\vendor\git-for-windows\mingw64\bin;C:\cmder\vendor\git-for-windows\usr\bin
+  C:\cmder\bin;C:\cmder\vendor\bin;C:\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\cmder\vendor\conemu-maximus5;C:\cmder\vendor\conemu-maximus5\ConEmu;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;%NVM_HOME%;%NVM_SYMLINK%;C:\Ruby26\bin;C:\Users\pingjh\AppData\Local\Microsoft\WindowsApps;C:\cmder;C:\Program Files\nvm;C:\Users\pingjh\AppData\Roaming\npm;E:\nvm-noinstall;C:\Users\pingjh\AppData\Local\BypassRuntm;C:\Users\pingjh\AppData\Local\Programs\Fiddler;C:\Users\pingjh\AppData\Local\Programs\Microsoft VS Code\bin;C:\nvm;C:\Program Files\nodejs;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\cmder\vendor\git-for-windows\cmd;C:\cmder\vendor\git-for-windows\mingw64\bin;C:\cmder\vendor\git-for-windows\usr\bin
 
 Yarn version: 
   1.19.1
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: connect ETIMEDOUT 104.16.23.35:443
+  Error: connect ETIMEDOUT 104.16.19.35:443
       at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
 
 npm manifest: 
@@ -26,11 +26,13 @@ npm manifest:
       "build": "vite build"
     },
     "dependencies": {
-      "vue": "^3.0.0-rc.1"
+      "vue": "^3.0.0-rc.1",
+      "vue-router": "^4.0.0-beta.2"
     },
     "devDependencies": {
-      "vite": "^1.0.0-rc.1",
-      "@vue/compiler-sfc": "^3.0.0-rc.1"
+      "@vue/compiler-sfc": "^3.0.0-rc.1",
+      "sass": "^1.26.10",
+      "vite": "^1.0.0-rc.1"
     }
   }
 
@@ -526,7 +528,7 @@ Lockfile:
       ansi-styles "^4.1.0"
       supports-color "^7.1.0"
   
-  chokidar@^3.3.1:
+  "chokidar@>=2.0.0 <4.0.0", chokidar@^3.3.1:
     version "3.4.1"
     resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.1.tgz#e905bdecf10eaa0a0b1db0c664481cc4cbc22ba1"
     integrity sha512-TQTJyr2stihpC4Sya9hs2Xh+O2wf+igjL36Y75xx2WdHuiICcn/XJza46Jwt0eT5hVpQOzo3FpY3cj3RVYLX0g==
@@ -1796,6 +1798,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
     integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
   
+  sass@^1.26.10:
+    version "1.26.10"
+    resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.10.tgz#851d126021cdc93decbf201d1eca2a20ee434760"
+    integrity sha512-bzN0uvmzfsTvjz0qwccN1sPm2HxxpNI/Xa+7PlUEMS+nQvbyuEK7Y0qFqxlPHhiNHb1Ze8WQJtU31olMObkAMw==
+    dependencies:
+      chokidar ">=2.0.0 <4.0.0"
+  
   selfsigned@^1.10.7:
     version "1.10.7"
     resolved "https://registry.yarnpkg.com/selfsigned/-/selfsigned-1.10.7.tgz#da5819fd049d5574f28e88a9bcc6dbc6e6f3906b"
@@ -2033,6 +2042,11 @@ Lockfile:
       slash "^3.0.0"
       vue "^3.0.0-rc.1"
       ws "^7.2.3"
+  
+  vue-router@^4.0.0-beta.2:
+    version "4.0.0-beta.2"
+    resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.0-beta.2.tgz#792dfafdb2b2eecfe84f53e2ce6855ccff079e92"
+    integrity sha512-+TvUCpxEhgSCssMTXdX4qei/YZN1kEt4nZoOySPLLUlAeEIlY3K1ps3hyCOeC1qYGCuSwaWuDmK/yi2d7W0sSg==
   
   vue@^3.0.0-rc.1:
     version "3.0.0-rc.2"
